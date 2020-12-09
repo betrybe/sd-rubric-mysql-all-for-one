@@ -1,6 +1,7 @@
 const { readFileSync } = require('fs');
 const { Sequelize } = require('sequelize');
 const Importer = require('mysql-import');
+const restoreDB = require('./restoreDB');
 
 describe('Desafios de manipulação de tabelas', () => {
   let importer;
@@ -26,7 +27,10 @@ describe('Desafios de manipulação de tabelas', () => {
     await sequelize.query('USE northwind;', { type: 'RAW' });
   });
 
-  afterEach(async () => await sequelize.query('DROP DATABASE northwind;', { type: 'RAW' }));
+  afterEach(async () => {
+    await sequelize.query('DROP DATABASE northwind;', { type: 'RAW' });
+    await restoreDB('northwind');
+  });
 
   describe('Queries de inserção', () => {
     const countOrderDetailsQuery = `SELECT COUNT(*) AS details_count FROM northwind.order_details

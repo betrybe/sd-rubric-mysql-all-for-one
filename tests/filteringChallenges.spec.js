@@ -1,6 +1,7 @@
 const { readFileSync } = require('fs');
 const { Sequelize } = require('sequelize');
 const Importer = require('mysql-import');
+const restoreDB = require('./restoreDB');
 
 describe('Desafios sobre filtragem de dados', () => {
   let sequelize;
@@ -22,6 +23,7 @@ describe('Desafios sobre filtragem de dados', () => {
   afterAll(async () => {
     await sequelize.query('DROP DATABASE northwind;', { type: 'RAW' });
     sequelize.close();
+    await restoreDB('northwind');
   });
 
   describe('Mostre todos os valores de `notes` da tabela `purchase_orders` que não são nulos', () => {

@@ -11,9 +11,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 ### ANTES DE COMEÇAR A DESENVOLVER:
 
 1. Clone o repositório
-  * `git clone https://github.com/tryber/sd-rubric-mysql-all-for-one.git`.
+  * `git clone https://github.com/tryber/sd-06-mysql-all-for-one.git`.
   * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-rubric-mysql-all-for-one`
+    * `cd sd-06-mysql-all-for-one`
 
 2. Instale as dependências [**Caso existam**]
   * `npm install` [**exemplo**]
@@ -46,13 +46,13 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   * Usando o exemplo anterior: `git push -u origin seunome-mysql-all-for-one`
 
 7. Crie um novo `Pull Request` _(PR)_
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-rubric-mysql-all-for-one/pulls)
+  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-06-mysql-all-for-one/pulls)
   * Clique no botão verde _"New pull request"_
   * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
   * Clique no botão verde _"Create pull request"_
   * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
   * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-rubric-mysql-all-for-one/pulls) e confira que o seu _Pull Request_ está criado
+  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-06-mysql-all-for-one/pulls) e confira que o seu _Pull Request_ está criado
 
 ---
 
@@ -61,6 +61,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 Temos, nesse projeto, uma série de desafios com diferentes níveis de complexidade que devem ser resolvidos cada um em seu arquivo próprio.
 
 1. Leia a pergunta e crie um arquivo chamado `desafioN.sql`, em que N é o número do desafio;
+  * Uma maneria fácil de criar os arquivos através do terminal, é utilizando `touch desafio{1..x}.sql` onde `x` é o número do último desafio;
 
 2. O arquivo deve conter apenas o código SQL do desafio resolvido. **Não se esqueça de incluir o ponto e vírgula (";")** no final de suas queries e também de colocar o nome do **banco_de_dados.tabela_por_completo**, como no exemplo a seguir:
 ```sql
@@ -174,6 +175,8 @@ Monte queries para encontrar as seguintes informações:
 
 ### DURANTE O DESENVOLVIMENTO
 
+⚠ Lembre-se que garantir que todas as _issues_ comentadas pelo CodeClimate estão resolvidas! ⚠
+
 * Faça `commits` das alterações que você fizer no código regularmente
 
 * Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
@@ -197,7 +200,7 @@ Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus co
 
   * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
 
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`.
+  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-06`.
 
 Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
 
