@@ -1,6 +1,7 @@
 const { readFileSync } = require('fs');
 const { Sequelize } = require('sequelize');
 const Importer = require('mysql-import');
+const restoreDB = require('./restoreDB');
 
 describe('Desafios iniciais', () => {
   let sequelize;
@@ -22,6 +23,7 @@ describe('Desafios iniciais', () => {
   afterAll(async () => {
     await sequelize.query('DROP DATABASE northwind;', { type: 'RAW' });
     sequelize.close();
+    await restoreDB('northwind');
   });
 
   describe('Exiba apenas os nomes do produtos na tabela `products`', () => {

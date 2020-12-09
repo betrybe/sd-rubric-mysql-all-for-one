@@ -1,6 +1,7 @@
 const { readFileSync } = require('fs');
 const { Sequelize } = require('sequelize');
 const Importer = require('mysql-import');
+const restoreDB = require('./restoreDB');
 
 describe('Desafios de manipulação de tabelas', () => {
   let importer;
@@ -19,6 +20,7 @@ describe('Desafios de manipulação de tabelas', () => {
   afterAll(() => {
     importer.disconnect();
     sequelize.close();
+    await restoreDB('northwind');
   });
 
   beforeEach(async () => {
